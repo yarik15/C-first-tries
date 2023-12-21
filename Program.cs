@@ -21,19 +21,35 @@
 //---------------------------------------------------------------------------------------------------------------
 // Задайте массив на 10 целых чисел. 
 // Напишите программу, которая определяет количество чётных чисел в массиве.
-Console.Clear();
-int n = 10;
-int [] array = new int[n];
-int count = 0;
+// Console.Clear();
+// int n = 10;
+// int [] array = new int[n];
+// int count = 0;
 
-for(int i = 0; i < array.Length; i++)
-    array[i] = new Random().Next(0,11);
-for(int i = 0; i < array.Length; i++)
-{
-    if (array[i] % 2 == 0)
-    {
-        count++;
-    }
-}
-Console.WriteLine($"The quantity of the even numbers {count}");
-Console.WriteLine(string.Join(",",array));
+// for(int i = 0; i < array.Length; i++)
+//     array[i] = new Random().Next(0,11);
+// for(int i = 0; i < array.Length; i++)
+// {
+//     if (array[i] % 2 == 0)
+//     {
+//         count++;
+//     }
+// }
+// Console.WriteLine($"The quantity of the even numbers {count}");
+// Console.WriteLine(string.Join(",",array));
+//---------------------------------------------------------------------------------------
+// Задайте массив из вещественных чисел с ненулевой дробной частью. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+Console.Clear();
+Console.WriteLine("Введите количество элементов массива: ");
+int a = Convert.ToInt32(Console.ReadLine());
+double dif_ = 0;
+double [] Array = new double[a];
+
+
+Random rand = new Random();
+for (int i = 0; i < a; i++)
+    Array[i] = rand.NextDouble();
+dif_ = Array[Array.Length - 1] - Array[0];
+Console.WriteLine($"The difference of numbers is {dif_}");
+Console.WriteLine(string.Join(";",Array));
