@@ -40,16 +40,18 @@
 //---------------------------------------------------------------------------------------
 // Задайте массив из вещественных чисел с ненулевой дробной частью. 
 // Найдите разницу между максимальным и минимальным элементов массива.
-Console.Clear();
-Console.WriteLine("Введите количество элементов массива: ");
-int a = Convert.ToInt32(Console.ReadLine());
-double dif_ = 0;
-double [] Array = new double[a];
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов массива: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// double dif_ = 0;
+// double [] Array = new double[a];
 
 
-Random rand = new Random();
-for (int i = 0; i < a; i++)
-    Array[i] = rand.NextDouble();
-dif_ = Array[Array.Length - 1] - Array[0];
-Console.WriteLine($"The difference of numbers is {dif_}");
-Console.WriteLine(string.Join(";",Array));
+// Random rand = new Random();
+// for (int i = 0; i < a; i++)
+//     Array[i] = rand.NextDouble();
+// dif_ = Array[Array.Length - 1] - Array[0];
+// Console.WriteLine($"The difference of numbers is {dif_}");
+// Console.WriteLine(string.Join(";",Array));
+
+
