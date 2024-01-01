@@ -35,26 +35,53 @@
 // Задайте двумерный массив. 
 // Напишите программу, которая поменяет местами первую и последнюю строку массива.
 
- var array = new int[4, 4]
- { 
-     { 86, 90, 111, 23 },
-     { 33, 12, 4, 67 },
-     { 34, 45, 1, 23 },
-     { 0, 7, 54, 2 }
- };
- for(int i = 0; i < array.GetLength(1); i++)
- {
-     var tmp = array[3, i];
-     array[3, i] = array[0, i];
-     array[0, i] = tmp;
- }
- for(int i = 0; i < array.GetLength(0); i++)
- {
-     for(int j = 0; j < array.GetLength(1); j++)
-         {
-             Console.Write(array[i,j] + " ");
-         }
-         Console.WriteLine();
- }
- Console.ReadKey(true);
+//  var array = new int[4, 4]
+//  { 
+//      { 86, 90, 111, 23 },
+//      { 33, 12, 4, 67 },
+//      { 34, 45, 1, 23 },
+//      { 0, 7, 54, 2 }
+//  };
+//  for(int i = 0; i < array.GetLength(1); i++)
+//  {
+//      var tmp = array[3, i];
+//      array[3, i] = array[0, i];
+//      array[0, i] = tmp;
+//  }
+//  for(int i = 0; i < array.GetLength(0); i++)
+//  {
+//      for(int j = 0; j < array.GetLength(1); j++)
+//          {
+//              Console.Write(array[i,j] + " ");
+//          }
+//          Console.WriteLine();
+//  }
+//  Console.ReadKey(true);
+//---------------------------------------------------------------------------------------
+
+int [,] matrix = {
+    {23, 43, 54},
+    {65, 76, 87},
+    {98, 100, 0}
+};
+int min_sumM = 0;
+int min_sum = int.MaxValue;
+int sum_ = 0;
+for (int i = 0; i < matrix.GetLength(0); i++)
+{
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        sum_ += matrix[i, j];
+    }
+    if (sum_ < min_sum)
+    {
+        min_sum = sum_;
+        min_sumM = i;
+    }
+}
+Console.WriteLine("В этой строке наименьшая сумма элементов: ");
+for (int f = 0; f < matrix.GetLength(1); f++)
+{
+    Console.WriteLine(matrix[min_sumM, f] + "\t");
+}
 
