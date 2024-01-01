@@ -25,11 +25,11 @@ res = res.ToLower();
 for (int i = res.Length - 1; i >= 0; i--)
     if (res[i] != res - 1 )
     {
-        Console.Write("Строка является полиндромом");
+        Console.Write("Строка является палиндромом");
     }
     else
     {
-        Console.Write("Строка не является полиндромом");
+        Console.Write("Строка не является палиндромом");
     }
 
 
